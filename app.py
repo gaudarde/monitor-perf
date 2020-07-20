@@ -14,6 +14,7 @@ import plotly.graph_objects as go
 
 # load stuffs
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 df = pd.read_csv('data/data.csv', encoding='cp1252', parse_dates=[
     'Início', 'Término', 'Conclusão'], dayfirst=True, index_col='Início')
 
