@@ -1,5 +1,6 @@
 import glob
 import os
+import re
 from datetime import datetime
 
 import numpy as np
@@ -19,14 +20,28 @@ def dados():
         arquivo,
         encoding='cp1252',
         dayfirst=True,
+        infer_datetime_format=True,
         converters={
-            'Código Poço': lambda x: str(x)},
+            'Código Poço': lambda x: str(x),
+            'Bacia': lambda x: str(x).rsplit('  ')[0],
+            'Bloco': lambda x: str(x).rsplit('  ')[0],
+            'Operador': lambda x: str(x).rsplit('  ')[0],
+            'Nome Poço ANP': lambda x: str(x).rsplit('  ')[0],
+        },
         parse_dates=[
             'Data Início Perfuração',
             'Data Término Perfuração',
             'Data Conclusão Poço'],
-        index_col='Código Poço'
+        index_col='Código Poço',
+        error_bad_lines=False
     )
+
+    df['Data Início Perfuração'] = pd.to_datetime(df['Data Início Perfuração'],
+                                                  dayfirst=True, infer_datetime_format=True, errors='coerce')
+    df['Data Término Perfuração'] = pd.to_datetime(df['Data Término Perfuração'],
+                                                   dayfirst=True, infer_datetime_format=True, errors='coerce')
+    df['Data Conclusão Poço'] = pd.to_datetime(df['Data Conclusão Poço'],
+                                               dayfirst=True, infer_datetime_format=True, errors='coerce')
 
     df = df.drop([df.columns[0]], axis='columns')
 
@@ -34,7 +49,13 @@ def dados():
 
     df['Nome Poço ANP'].replace(r'\W|\s|_', '', regex=True, inplace=True)
     df['Nome Poço Operador'].replace(r'\W|\s|_', '', regex=True, inplace=True)
-    df['Profundidade Vertical'] = df['Profundidade Vertical'].abs()
+
+    # TODO Por que estamos tendo problemas para converter a prof. vertical para valor numérico?
+    try:
+        df['Profundidade Vertical'] = pd.to_numeric(df['Profundidade Vertical'])
+        df['Profundidade Vertical'] = df['Profundidade Vertical'].abs()
+    except:
+        pass
 
     df['Lâmina D Água'].fillna(0, inplace=True)
 
@@ -118,6 +139,11 @@ def dados():
         'injeção': 'produção',
         'especial': 'N.D.',
     }
+
+    df['Bacia'] = df['Bacia'].apply(lambda x: re.split(r'\s$', x)[0])
+    df['Bloco'] = df['Bloco'].apply(lambda x: re.split(r'\s$', x)[0])
+    df['Operador'] = df['Operador'].apply(lambda x: re.split(r'\s$', x)[0])
+    df['Operador'].fillna('ND', inplace=True)
 
     df.loc[df['Campo'].isna(), 'objetivo'] = 'exploração'
     df['objetivo'].fillna(df['tipo'], inplace=True)

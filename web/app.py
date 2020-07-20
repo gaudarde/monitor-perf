@@ -10,106 +10,18 @@ import dash_core_components as dcc
 import dash_html_components as html
 import dash_table
 import pandas as pd
-import plotly.express as px
-import plotly.io as pio
+import plotly.graph_objects as go
 
 # load stuffs
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
 df = pd.read_csv('data/data.csv', encoding='cp1252', parse_dates=[
-    'Início', 'Término', 'Conclusão'], index_col='Início')
+    'Início', 'Término', 'Conclusão'], dayfirst=True, index_col='Início')
 
 OffshoreMonthly = df[df['Ambiente'] == 'MAR'].resample('M').count()
 OnshoreMonthly = df[df['Ambiente'] == 'TERRA'].resample('M').count()
-dfTable = pd.read_csv('data/table.csv', encoding='cp1252', parse_dates=['Início', 'Término'])
+
+dfTable = pd.read_csv('data/table.csv', encoding='cp1252', parse_dates=['Início', 'Término'], dayfirst=True)
 dfTable.sort_values(by=['Início'], ascending=False, inplace=True)
-
-# styles
-
-pio.templates.default = "ggplot2"
-
-body = {
-    'backgroundColor': '#f9f9f9',
-}
-
-header = {
-    'backgroundColor': '#fafafa',
-    'padding': '20px',
-    'border': 'solid 5px white'
-}
-
-logo = {
-    'borderRadius': '12px',
-    'backgroundColor': 'white',
-    'margin': '10px',
-    'padding': '15px',
-    'boxShadow': '2px 2px 2px lightgrey',
-    'width': '250px',
-    'height': 'auto',
-    'position': 'relative',
-    'left': '22.5%',
-}
-
-text = {
-    'borderRadius': '12px',
-    'backgroundColor': 'white',
-    'margin': '0px',
-    'padding': '3px',
-    'boxShadow': '2px 2px 2px lightgrey',
-    'width': '200px',
-    'height': 'auto',
-    'position': 'relative',
-    'left': '30%',
-    'top': '33%',
-    'textAlign': 'center',
-    'fontFamily': 'Verdana, sans-serif',
-    'fontSize': '12px',
-    'fontWeight': '900',
-}
-
-B = {
-    'borderRadius': '12px',
-    'backgroundColor': '#f9f9f9',
-    'margin': '0px',
-    'padding': '3px',
-    'boxShadow': '2px 2px 2px lightgrey',
-    'width': 'auto',
-    'height': 'auto',
-    'position': 'relative',
-    'left': '0%',
-    'top': '0%',
-    'textAlign': 'center',
-    'fontFamily': 'Verdana, sans-serif',
-    'fontSize': '12px',
-    'fontWeight': '900',
-}
-
-graphs = {
-    'borderRadius': '12px',
-    'backgroundColor': 'white',
-    'margin': '15px',
-    'padding': '0px',
-    'boxShadow': '2px 2px 2px lightgrey',
-    'height': 'auto',
-    'position': 'relative',
-    'textAlign': 'center',
-    'fontFamily': 'Verdana, sans-serif',
-    'fontSize': '12px',
-    'fontWeight': '900',
-}
-
-cards = {
-    'borderRadius': '12px',
-    'backgroundColor': 'white',
-    'margin': '15px',
-    'padding': '3px',
-    'boxShadow': '2px 2px 2px lightgrey',
-    'height': 'auto',
-    'position': 'relative',
-    'textAlign': 'left',
-    'fontFamily': 'Verdana, sans-serif',
-    'fontSize': '12px',
-    'fontWeight': '900',
-}
 
 # quick calcs
 lastUpdate = datetime.fromtimestamp(os.path.getmtime('data/table.csv')).strftime('%d-%m-%Y')
@@ -118,37 +30,137 @@ latestYear = dfTable['Início'].dt.year.max()
 offshoreWells = sum((dfTable['Ambiente'] == 'MAR') & (dfTable['Início'].dt.year == latestYear))
 onshoreWells = sum((dfTable['Ambiente'] == 'TERRA') & (dfTable['Início'].dt.year == latestYear))
 
+# date picker before date to str
+marks = [f'{i}: str({i}),' for i in dfTable['Início'].dt.year.unique()]
+dateslider = dcc.RangeSlider(
+    id='year-picker',
+    min=1922,
+    max=2020,
+    value=[1922, 2020],
+    marks={1922: '1922', 2020: '2020'}
+)
+
 # quick formats
 dfTable['Início'] = dfTable['Início'].dt.strftime('%d/%m/%Y')
 dfTable['Término'] = dfTable['Término'].dt.strftime('%d/%m/%Y')
+
+# offshore well
+figOffshoreWells = go.Figure()
+figOffshoreWells.add_trace(
+    go.Scatter(
+        x=OffshoreMonthly.index,
+        y=OffshoreMonthly['Código (ANP)'],
+        mode='lines+markers',
+        line=dict(
+            color='#273469',
+            width=2.5,
+        )
+    )
+)
+
+graphConfigOffshore = {
+    'displaylogo': False,
+    'displayModeBar': True,
+    'modeBarButtonsToRemove': ['zoom2d', 'pan2d', 'select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d',
+                               'resetScale2d', 'hoverClosestCartesian', 'hoverClosestGl2d',
+                               'hoverClosestPie', 'toggleHover', 'resetViews', 'sendDataToCloud', 'toggleSpikelines',
+                               'resetViewMapbox'],
+    'toImageButtonOptions': {
+        'filename': 'poços offshore-monitor-epbr.com.br',
+        'scale': 2,
+    },
+    'locale': 'pt-BR',
+}
+
+figOffshoreWells.update_layout(
+    title={
+        'text': 'Perfuração offshore',
+        'x': 0.05,
+        'xanchor': 'left',
+    },
+    xaxis_title='meses',
+    yaxis_title='poços',
+    font=dict(
+        family='Verdana, sans-serif',
+        size=14,
+    ),
+    paper_bgcolor="#FAFAFF",
+    margin=dict(
+        pad=0,
+    ),
+)
+
+# onshore well
+figOnshoreWells = go.Figure()
+figOnshoreWells.add_trace(
+    go.Scatter(
+        x=OnshoreMonthly.index,
+        y=OnshoreMonthly['Código (ANP)'],
+        mode='lines+markers',
+        line=dict(
+            color='#A5243D',
+            width=2.5,
+        ),
+    )
+)
+
+graphConfigOnshore = {
+    'displaylogo': False,
+    'displayModeBar': True,
+    'modeBarButtonsToRemove': ['zoom2d', 'pan2d', 'select2d', 'lasso2d', 'zoomIn2d', 'zoomOut2d', 'autoScale2d',
+                               'resetScale2d', 'hoverClosestCartesian', 'hoverClosestGl2d',
+                               'hoverClosestPie', 'toggleHover', 'resetViews', 'sendDataToCloud', 'toggleSpikelines',
+                               'resetViewMapbox'],
+    'toImageButtonOptions': {
+        'filename': 'poços onshore-monitor-epbr.com.br',
+        'scale': 2,
+    },
+    'locale': 'pt-BR',
+}
+
+figOnshoreWells.update_layout(
+    title={
+        'text': 'Perfuração onshore',
+        'x': 0.05,
+        'xanchor': 'left',
+    },
+    xaxis_title='meses',
+    yaxis_title='poços',
+    font=dict(
+        family='Verdana, sans-serif',
+        size=14,
+    ),
+    paper_bgcolor="#FAFAFF",
+)
 
 # sample data table
 dataTable = dash_table.DataTable(
     id='sample-table',
     columns=[{"name": i, "id": i} for i in dfTable.columns],
     data=dfTable.to_dict('records'),
-    page_size=20,
+    page_size=50,
     style_table={},
     style_header={
         'backgroundColor': '#395C6B',
         'fontWeight': '900',
-        'fontSize': '15px',
+        'fontSize': '0.66em',
         'fontFamily': 'Verdana, sans-serif',
         'color': '#fafafa',
         'textAlign': 'center',
-        'paddingLeft': '12px',
-        'paddingRight': '12px',
-        'border': '1px white',
+        'paddingLeft': '8px',
+        'paddingRight': '8px',
+        'border': '1px #6E8898',
     },
     style_cell={
         'width': '80px',
         'maxWidth': '80px',
         'minWidth': '80px',
-        'whiteSpace': 'normal',
+        '#6E8898Space': 'normal',
         'textAlign': 'center',
-        'fontSize': '14px',
+        'fontSize': '0.66em',
         'fontFamily': 'Verdana, sans-serif',
-        'border': '1px solid white',
+        'border': '1px #6E8898',
+        'whiteSpace': 'normal',
     },
     style_data_conditional=[
         {'if': {'row_index': 'odd'}, 'backgroundColor': '#D7E4EA'},
@@ -156,90 +168,170 @@ dataTable = dash_table.DataTable(
     ],
 )
 
-# offshore well
-figOffshoreWells = px.bar(OffshoreMonthly, x=OffshoreMonthly.index, y='Código (ANP)')
-figOffshoreWells.update_layout(
-    title='Perfuração offshore',
-    xaxis_title='meses',
-    yaxis_title='poços',
-    font=dict(
-        family='Verdana, sans-serif',
-        size=12,
+# offshore rigs
+figOffshoreRigs = go.Figure()
+figOffshoreRigs.add_trace(
+    go.Bar(
+        x=OffshoreMonthly['Sonda'],
+        y=OffshoreMonthly.groupby('Sonda').count(),
     )
 )
 
-# onshore well
-figOnshoreeWells = px.bar(OnshoreMonthly, x=OnshoreMonthly.index, y='Código (ANP)')
-figOnshoreeWells.update_layout(
-    title='Perfuração onshore',
-    xaxis_title='meses',
-    yaxis_title='poços',
+# Create controls
+ambiente_options = [
+    {"label": i, "value": i} for i in df['Ambiente'].unique()
+]
+
+bacias_options = [
+    {"label": i, "value": i} for i in df['Bacia'].unique()
+]
+
+bloco_options = [
+    {"label": i, "value": i} for i in df['Bloco'].unique()
+]
+
+campo_options = [
+    {"label": i, "value": i} for i in df['Campo'].unique()
+]
+
+operador_options = [
+    {"label": i, "value": i} for i in df['Operador'].unique()
+]
+
+tipo_options = [
+    {"label": i, "value": i} for i in df['Tipo'].unique()
+]
+
+dropdown_bacias = dcc.Dropdown(
+    options=bacias_options,
+    multi=True,
+    placeholder='Bacias',
+    persistence=True,
+    persistence_type='session'
 )
 
-app.layout = html.Div(style=body, children=[
+dropdown_bloco = dcc.Dropdown(
+    options=bloco_options,
+    multi=True,
+    placeholder='Blocos',
+    persistence=True,
+    persistence_type='session'
+)
+
+dropdown_campo = dcc.Dropdown(
+    options=campo_options,
+    multi=True,
+    placeholder='Campos',
+    persistence=True,
+    persistence_type='session'
+)
+
+dropdown_operador = dcc.Dropdown(
+    options=operador_options,
+    multi=True,
+    placeholder='Operador',
+    persistence=True,
+    persistence_type='session'
+)
+
+dropdown_poco = dcc.Dropdown(
+    options=tipo_options,
+    multi=True,
+    placeholder='Tipos',
+    persistence=True,
+    persistence_type='session'
+)
+
+# app
+app.layout = html.Div([
     dbc.Container(
         [
-            # row header
-            dbc.Row(children=[
-                dbc.Col(html.Div(
+            # fisrt row
+            dbc.Row([
+                # logo
+                dbc.Col(children=[
                     html.Img(
                         src=app.get_asset_url('monitor-logo.png'),
-                        id='monitor-logo',
-                        style=logo,
+                        id='logo',
+                        className='logo'
                     ),
-                ), md=6, sm=12),
-                dbc.Col(html.Div(
-                    f'ATUALIDO EM {lastUpdate}',
-                    style=text
-                ), md=6, sm=12),
-            ]),
+                    html.Div(
+                        f'Atualizado em: {lastUpdate}',
+                        id='update-card',
+                        className='update-card',
+                    ),
+                ], className='card col-md-3'),
 
-            # row summary
-            dbc.Row(children=[
-                dbc.Col(html.Div('controls', style=graphs), md=6),
+                # summary
+                dbc.Col(children=[
+                    dbc.Row([
+                        html.Div(html.P(f'# offshore ({latestYear})'),
+                                 className='summary-title', id='summary-title-offshore'),
+                        html.Div(html.P(offshoreWells),
+                                 className='summary-number', id='summary-number-offshore')
+                    ]),
+                ], className='summary-card col-md-3'),
 
-                # card offshore
-                dbc.Col(html.Div([
-                    html.P(f'# poços offshore ({latestYear})'),
-                    html.P(offshoreWells)
-                ],
-                    style=cards), md=3),
+                dbc.Col(children=[
+                    dbc.Row([
+                        html.Div(html.P(f'# onshore ({latestYear})'),
+                                 className='summary-title', id='summary-title-onshore'),
+                        html.Div(html.P(onshoreWells),
+                                 className='summary-number', id='summary-number-onshore')
+                    ]),
+                ], className='summary-card col-md-3'),
+            ], className='col-md-12'),
 
-                # card onshore
-                dbc.Col(html.Div([
-                    html.P(f'# poços onshore ({latestYear})'),
-                    html.P(onshoreWells)
-                ],
-                    style=cards), md=3),
-            ]),
+            # controls
+            dbc.Row([
 
-            # row main-graphs
-            dbc.Row(children=[
+                dbc.Col([
+                    html.Div(dropdown_bacias,
+                             id='filter-bacia', className='dropdown'),
+                    html.Div(dropdown_operador,
+                             id='filter-operador', className='dropdown'),
+                ], className='col-md-4'),
 
-                dbc.Col(html.Div(
-                    dcc.Graph(
-                        figure=figOffshoreWells,
-                        id='offshore-wells'
-                    ), style=graphs), md=8),
+                dbc.Col([
+                    html.Div(dropdown_campo,
+                             id='filter-campo', className='dropdown'),
+                    html.Div(dropdown_bloco,
+                             id='filter-bloco', className='dropdown'),
+                ], className='col-md-4'),
 
-                dbc.Col(html.Div('figOffshoreWell.show()', style=graphs), md=4),
+                dbc.Col([
+                    html.Div(dropdown_poco,
+                             id='filter-poco', className='dropdown'),
+                    html.Div(dateslider,
+                             className='date-picker'),
+                ], className='col-md-4'),
 
-                dbc.Col(html.Div(dcc.Graph(
-                    figure=figOnshoreeWells,
-                    id='onshore-wells'
-                ), style=graphs), md=8),
+            ], className='filter-card col-md-12'),
 
-                dbc.Col(html.Div('onshore-rigs', style=graphs), md=4),
-            ]),
+            # row graphs
+            dbc.Row(
+                dbc.Col(
+                    dcc.Graph(figure=figOffshoreWells,
+                              id='offshore-wells',
+                              config=graphConfigOffshore),
+                ), className='card col-md-12'),
 
-            # row sample data table
-            dbc.Row(children=[
-                dbc.Col(html.Div('map', style=graphs), xs=12),
-                dbc.Col(html.A(f'Tabela  de poços (csv, {fileSize} MB)',
-                               style=graphs,
-                               href='data/data.csv'), sm=12, md=4),
-                dbc.Col(html.Div(dataTable, id='data_table'), md=12),
-            ]),
+            dbc.Row(
+                dbc.Col(
+                    dcc.Graph(figure=figOnshoreWells,
+                              id='onshore-wells',
+                              config=graphConfigOnshore),
+                ), className='card col-md-12'),
+
+            dbc.Row([
+                html.Div(
+                    html.A(f'Tabela  de poços (csv, {fileSize} MB)',
+                           href=app.get_asset_url('data.csv'),
+                           target='_blank'), className='table-title'
+                ),
+
+                html.Div(dataTable, id='data_table', className='table')
+            ], className='card col-md-12'),
         ]
     )])
 

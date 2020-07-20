@@ -102,7 +102,7 @@ def merge():
     df_list = []
     for csv_file in csv_list:
         print(f'Combinando {csv_file}')
-        df = pd.read_csv(csv_file, encoding='cp1252')
+        df = pd.read_csv(csv_file, encoding='cp1252', parse_dates=False)
         df_list.append(df)
         df = pd.concat(df_list, axis=0)
         df.to_csv(f"arquivos_combinados/pocos_{datetime.today().strftime('%m_%d_%Y')}.csv", encoding='cp1252')
