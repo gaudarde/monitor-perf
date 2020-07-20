@@ -5,9 +5,8 @@ import pandas as pd
 
 # load stuffs
 df = pd.read_csv('data/data.csv', encoding='cp1252', parse_dates=[
-    'Início', 'Término', 'Conclusão'], index_col='Início')
+    'Início', 'Término', 'Conclusão'], dayfirst=True)
 
-OffshoreMonthly = df[df['Ambiente'] == 'MAR'].resample('M').count()
-OnshoreMonthly = df[df['Ambiente'] == 'TERRA'].resample('M').count()
+marks = [f'{i}: {i}' for i in df['Início'].dt.year.unique()]
 
-print(OffshoreMonthly.head())
+print(marks)
