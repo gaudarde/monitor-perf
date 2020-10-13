@@ -261,7 +261,7 @@ app.layout = html.Div([
                         id='update-card',
                         className='update-card',
                     ),
-                ], className='card col-md-3'),
+                ], className='card col-md-3 col-sm-12'),
 
                 # summary
                 dbc.Col(children=[
@@ -271,7 +271,7 @@ app.layout = html.Div([
                         html.Div(html.P(offshoreWells),
                                  className='summary-number', id='summary-number-offshore')
                     ]),
-                ], className='summary-card col-md-3'),
+                ], className='summary-card col-md-3 col-sm-5'),
 
                 dbc.Col(children=[
                     dbc.Row([
@@ -280,7 +280,7 @@ app.layout = html.Div([
                         html.Div(html.P(onshoreWells),
                                  className='summary-number', id='summary-number-onshore')
                     ]),
-                ], className='summary-card col-md-3'),
+                ], className='summary-card col-md-3 col-sm-5'),
             ], className='col-md-12'),
 
             # controls

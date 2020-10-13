@@ -1,13 +1,13 @@
 .logo{
-    max-width: 250px;
-    min-width: 250px;
     padding: 2px;
+    width: 100%;
+    height: auto;
 }
-
+/*
 .card{
     box-shadow: 1.5px 1.5px 1.5px lightsteelblue;
     background-color: #FAFAFF;
-    margin: 6px;
+    margin: 12px;
     border-radius: 12px;
 }
 
@@ -40,20 +40,20 @@
 .summary-card{
     box-shadow: 1.5px 1.5px 1.5px lightsteelblue;
     background-color: #FAFAFF;
-    margin: 6px;
+    margin: 12px;
     border-radius: 12px;
 }
 
 .dropdown{
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 
 .filter-card{
     background-color: #FAFAFF;
     border-radius: 12px;
     box-shadow: 1.5px 1.5px 1.5px lightsteelblue;
-    margin: 6px;
+    margin: 12px;
 }
 
 .date-slider{
@@ -75,4 +75,4 @@
    overflow-x: auto;
    padding-left: 12px;
    padding-right: 12px;
-}
+}*/

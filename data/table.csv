@@ -28287,7 +28287,7 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2014-09-23,2014-09-25,Santos,LIBRA,Petrobras,MAR,2158.0,3BRSA1267iRJS,exploração,Sertão,Sonda Deslocada
 2014-09-27,2015-01-21,Santos,LIBRA,Petrobras,MAR,2158.0,3BRSA1267RJS,exploração,Sertão,Sonda Deslocada
 2014-11-05,2014-11-20,Santos,,Karoon,MAR,361.0,3KPGL4SPS,exploração,OLINDA STAR,Sonda Deslocada
-2014-07-27,2014-11-23,Santos,,Petrobras,MAR,2127.0,9BRSA1254RJS,N.D.,CAROLINA,Última posição
+2014-07-27,2014-11-23,Santos,,Petrobras,MAR,2127.0,9BRSA1254RJS,N.D.,CAROLINA,Sonda Deslocada
 2014-02-11,2014-03-06,Santos,,Enauta Energia S.A.,MAR,1548.0,7ATL3HRJS,produção,OCEAN STAR,Sonda Deslocada
 2014-08-10,2014-08-10,Santos,,Enauta Energia S.A.,MAR,1548.0,7ATL4HRJS,produção,OCEAN STAR,Última posição
 2014-09-28,2014-12-08,Santos,,Petrobras,MAR,2031.0,7BUZ6RJS,produção,ODN DELBA III,Sonda Deslocada
@@ -29781,9 +29781,9 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2019-12-13,2019-12-24,Campos,,Petro Rio O&G,MAR,103.0,7POL44HPRJS,produção,DEAL-1,Sonda Deslocada
 2019-11-05,2019-11-22,Campos,,Petro Rio O&G,MAR,103.0,9POL42DRJS,N.D.,DEAL-1,Sonda Deslocada
 2019-12-04,2019-12-06,Campos,,Petro Rio O&G,MAR,103.0,9POL43DPRJS,N.D.,DEAL-1,Sonda Deslocada
-2019-12-19,2020-01-26,Campos,,Petrobras,MAR,1872.0,8RO171DRJS,produção,ODN II,Última posição
+2019-12-19,2020-01-26,Campos,,Petrobras,MAR,1872.0,8RO171DRJS,produção,ODN II,Sonda Deslocada
 2019-05-21,2019-07-01,Espírito Santo,ES-T-476,BGM,TERRA,0,1BGM1ES,exploração,Cowan-02,Sonda Deslocada
-2019-07-21,2019-08-14,Espírito Santo,ES-T-476,BGM,TERRA,0,3BGM2ES,exploração,Cowan-02,Sonda Deslocada
+2019-07-21,2019-08-14,Espírito Santo,ES-T-476,BGM,TERRA,0.0,3BGM2ES,exploração,Cowan-02,Sonda Deslocada
 2019-11-05,2019-11-18,Espírito Santo,ES-T-476,BGM,TERRA,0,3BGM3ES,exploração,Cowan-02,Última posição
 2019-04-01,2019-04-09,Espírito Santo,,Petrobras,TERRA,0.0,7FAL130DES,produção,EBS-08,Sonda Deslocada
 2019-04-16,2019-04-21,Espírito Santo,,Petrobras,TERRA,0.0,7FAL131ES,produção,EBS-08,Sonda Deslocada
@@ -29796,7 +29796,7 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2019-09-17,2019-09-22,Espírito Santo,,Petrobras,TERRA,0.0,7FAL140DES,produção,EBS-08,Sonda Deslocada
 2019-09-08,2019-09-13,Espírito Santo,,Petrobras,TERRA,0.0,7FAL141DES,produção,EBS-08,Sonda Deslocada
 2019-12-11,2019-12-16,Espírito Santo,,Petrobras,TERRA,0.0,7FAL143DAES,produção,EBS-08,Sonda Deslocada
-2019-08-31,,Espírito Santo,,Petrobras,TERRA,0.0,7FAL143DES,produção,EBS-08,Sonda Deslocada
+2019-08-31,2019-09-04,Espírito Santo,,Petrobras,TERRA,0.0,7FAL143DES,produção,EBS-08,Sonda Deslocada
 2019-07-15,2019-07-21,Espírito Santo,,Petrobras,TERRA,0.0,7FAL145DES,produção,EBS-08,Sonda Deslocada
 2019-07-07,2019-07-11,Espírito Santo,,Petrobras,TERRA,0.0,7FAL147DES,produção,EBS-08,Sonda Deslocada
 2019-10-21,2019-10-25,Espírito Santo,,Petrobras,TERRA,0.0,7FAL148DES,produção,EBS-08,Sonda Deslocada
@@ -29878,16 +29878,16 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2019-10-27,2019-11-11,Recôncavo,,Alvopetro,TERRA,0.0,7CBE1DBA,produção,IMETAME_ENERGIA_01,Sonda Deslocada
 2019-02-13,2019-03-28,Recôncavo,,Petrobras,TERRA,0.0,7CGL6DBA,produção,SONDA CONVENCIONAL 109,Sonda Deslocada
 2019-09-20,2019-10-07,Recôncavo,,Imetame,TERRA,0.0,7CARN1DBA,produção,IMETAME_ENERGIA_01,Sonda Deslocada
-2019-07-10,,Recôncavo,,Petrobras,TERRA,0.0,7CS259DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-06-26,,Recôncavo,,Petrobras,TERRA,0.0,8CS257DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-09-23,,Recôncavo,,Petrobras,TERRA,0.0,7GO23BA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-07-24,,Recôncavo,,Petrobras,TERRA,0.0,8GO24DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-09-01,,Recôncavo,,Petrobras,TERRA,0.0,7MJ94DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-08-03,,Recôncavo,,Petrobras,TERRA,0.0,8NFC48DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-09-11,,Recôncavo,,Petrobras,TERRA,0.0,7RO114DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
-2019-10-05,,Recôncavo,,Petrobras,TERRA,0.0,7RSU5DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-07-10,2019-07-15,Recôncavo,,Petrobras,TERRA,0.0,7CS259DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-06-26,2019-07-01,Recôncavo,,Petrobras,TERRA,0.0,8CS257DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-09-23,2019-09-27,Recôncavo,,Petrobras,TERRA,0.0,7GO23BA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-07-24,2019-07-27,Recôncavo,,Petrobras,TERRA,0.0,8GO24DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-09-01,2019-09-05,Recôncavo,,Petrobras,TERRA,0.0,7MJ94DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-08-03,2019-08-07,Recôncavo,,Petrobras,TERRA,0.0,8NFC48DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-09-11,2019-09-16,Recôncavo,,Petrobras,TERRA,0.0,7RO114DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
+2019-10-05,2019-10-11,Recôncavo,,Petrobras,TERRA,0.0,7RSU5DBA,produção,National Oilwell Varco - 750,Sonda Deslocada
 2019-02-18,2019-04-10,Recôncavo,,Maha Energy,TERRA,0.0,7TIE1DBA,produção,GREAT - 105,Sonda Deslocada
-2019-10-06,2019-12-11,Santos,ALTO_CF_O,Shell Brasil,MAR,1721.8,1SHEL31RJS,exploração,Brava Star,Sonda Deslocada
+2019-10-06,2019-12-01,Santos,ALTO_CF_O,Shell Brasil,MAR,1721.8,1SHEL31RJS,exploração,Brava Star,Sonda Deslocada
 2019-11-25,2019-11-26,Santos,BLC_UIRAPR,Petrobras,MAR,1994.0,1BRSA1373ASPS,exploração,West Tellus,Sonda Deslocada
 2019-12-16,2020-03-20,Santos,BLC_UIRAPR,Petrobras,MAR,1995.0,1BRSA1373BSPS,exploração,West Tellus,Sonda Deslocada
 2019-11-11,2019-11-19,Santos,BLC_UIRAPR,Petrobras,MAR,1994.0,1BRSA1373SPS,exploração,West Tellus,Sonda Deslocada
@@ -29895,7 +29895,7 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2019-05-23,2019-06-09,Santos,,Petrobras,MAR,1959.0,7MRO6DRJS,produção,West Tellus,Sonda Deslocada
 2019-04-02,2019-10-20,Santos,,Petrobras,MAR,1897.0,8MRO4RJS,produção,West Tellus,Sonda Deslocada
 2019-02-08,2019-04-27,Santos,,Equinor Brasil,MAR,2080.0,3EQNR3SPS,exploração,West Saturn,Última posição
-2019-02-03,2019-02-04,Santos,,Equinor Brasil,MAR,20510.0,9EQNR2SPS,N.D.,West Saturn,Sonda Deslocada
+2019-02-03,2019-02-04,Santos,,Equinor Brasil,MAR,2051.0,9EQNR2SPS,N.D.,West Saturn,Sonda Deslocada
 2019-06-26,2019-08-05,Santos,S_GATO_MAT,Shell Brasil,MAR,2070.0,3SHEL30RJS,exploração,Brava Star,Sonda Deslocada
 2019-09-12,2019-12-10,Santos,S-M-623,Petrobras,MAR,1843.0,3BRSA1370SPS,exploração,ODN I,Sonda Deslocada
 2019-02-24,2019-03-01,Santos,,Enauta Energia S.A.,MAR,1549.0,7ATL4HARJS,produção,LAGUNA STAR,Sonda Deslocada
@@ -29909,7 +29909,7 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2019-07-29,2019-11-27,Santos,,Total E&P do Brasil,MAR,2146.0,7LPA5DSPS,produção,DS-9,Sonda Deslocada
 2019-09-01,2020-03-02,Santos,,Total E&P do Brasil,MAR,2147.7,7LPA6DSPS,produção,DS-9,Sonda Deslocada
 2019-06-10,2020-01-23,Santos,,Total E&P do Brasil,MAR,2180.0,8LPA4DSPS,produção,DS-9,Sonda Deslocada
-2019-09-13,2019-11-08,Santos,,Total E&P do Brasil,MAR,2135.5,8LPA7DSPS,produção,DS-9,Última posição
+2019-09-12,2019-11-08,Santos,,Total E&P do Brasil,MAR,2135.5,8LPA7DSPS,produção,DS-9,Última posição
 2019-11-24,2020-03-05,Santos,,Petrobras,MAR,1960.0,7MRO7ARJS,produção,Deepwater Myconos,Sonda Deslocada
 2019-11-27,2020-01-09,Santos,,Petrobras,MAR,1960.0,7MRO7RJS,produção,Deepwater Myconos,Sonda Deslocada
 2019-02-13,2019-03-28,Santos,,Petrobras,MAR,2153.0,8SEP3RJS,produção,ODN II,Sonda Deslocada
@@ -29941,7 +29941,7 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2019-10-10,2019-10-20,Sergipe,,Petrobras,TERRA,0.0,7CP1869DSE,produção,EBS-05,Sonda Deslocada
 2019-11-19,2019-11-29,Sergipe,,Petrobras,TERRA,0.0,7CP1873DSE,produção,EBS-05,Sonda Deslocada
 2019-09-27,2019-10-07,Sergipe,,Petrobras,TERRA,0.0,7CP1879DSE,produção,EBS-05,Sonda Deslocada
-2019-07-12,2019-10-12,Sergipe,,Maha Energy,MAR,13.7,7TTG3DSES,produção,FAXE-2,Última posição
+2019-07-12,2019-10-12,Sergipe,,Maha Energy,MAR,13.7,7TTG3DSES,produção,FAXE-2,Sonda Deslocada
 2019-05-14,2019-06-19,Solimões,SOL-T-191,Rosneft,TERRA,0.0,1RNB4AM,exploração,RNB-2,Última posição
 2020-02-17,2020-02-24,Alagoas,SEAL-T-280,Nova Petróleo,TERRA,0.0,1NOVA2AL,exploração,GREAT - 105,Sonda Deslocada
 2020-03-05,2020-03-10,Alagoas,SEAL-T-291,Nova Petróleo,TERRA,0.0,1NOVA3AL,exploração,GREAT - 105,Última posição
@@ -29951,19 +29951,26 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2020-01-16,2020-02-04,Campos,,Shell Brasil,MAR,1584.0,7ARGO20HESS,produção,Brava Star,Sonda Deslocada
 2020-06-04,,Campos,C-M-657,Petrobras,MAR,2892.0,1BRSA1376DRJS,exploração,West Tellus,Última posição
 2020-02-13,2020-03-28,Campos,SO_TRTG_VD,Petrobras,MAR,1080.0,1BRSA1375RJS,exploração,GOLD STAR,Sonda Deslocada
-2020-02-15,2020-04-23,Campos,,Petrobras,MAR,450.0,9AB135DRJS,N.D.,NORBE VIII,Sonda Deslocada
+2020-02-13,2020-04-23,Campos,,Petrobras,MAR,450.0,9AB135DRJS,N.D.,NORBE VIII,Sonda Deslocada
+2020-08-14,,Campos,,Petrobras,MAR,1324.0,8JUB60DESS,produção,CAROLINA,Última posição
 2020-02-23,2020-03-08,Campos,,Petrobras,MAR,1114.0,7MLL86HPARJS,produção,NORBE IX,Última posição
 2020-02-06,2020-02-17,Campos,,Petrobras,MAR,1114.0,7MLL86HPRJS,produção,NORBE IX,Sonda Deslocada
 2020-01-09,2020-02-02,Campos,,Petrobras,MAR,1114.0,9MLL85DRJS,N.D.,NORBE IX,Sonda Deslocada
-2020-03-10,2020-05-05,Campos,,Petrobras,MAR,1268.0,8MLS238HRJS,produção,NORBE VIII,Última posição
+2020-03-10,2020-05-05,Campos,,Petrobras,MAR,1268.0,8MLS238HRJS,produção,NORBE VIII,Sonda Deslocada
 2020-02-03,,Campos,,Petrobras,MAR,1599.0,8MLS239HRJS,produção,NORBE VIII,Sonda Deslocada
 2020-02-14,,Campos,,Equinor Brasil,MAR,106.0,7PRG70HRJS,produção,DRILLINGRIG-A,Última posição
 2020-01-29,2020-02-14,Campos,,Petro Rio O&G,MAR,103.0,9POL45DRJS,N.D.,DEAL-1,Última posição
-2020-07-08,,Campos,,Petrobras,MAR,0.0,9RO169DRJS,N.D.,LONE STAR,Última posição
-2020-04-22,2020-05-25,Campos,,Petrobras,MAR,941.0,7TVD5DRJS,produção,GOLD STAR,Última posição
+2020-08-14,2020-08-31,Campos,,Petrobras,MAR,1555.0,8RO170HPRJS,produção,ODN I,Sonda Deslocada
+2020-07-08,2020-08-08,Campos,,Petrobras,MAR,0.0,9RO169DRJS,N.D.,LONE STAR,Última posição
+2020-04-17,2020-05-25,Campos,,Petrobras,MAR,941.0,7TVD5DRJS,produção,GOLD STAR,Última posição
 2020-02-28,2020-04-01,Espírito Santo,ES-T-487,Imetame,TERRA,0.0,1IMET27ES,exploração,IMETAME_ENERGIA_01,Última posição
-2020-07-10,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC42DES,produção,EBS-08,Última posição
-2020-06-23,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC43ES,produção,EBS-08,Sonda Deslocada
+2020-09-10,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC40ES,produção,EBS-08,Sonda Deslocada
+2020-07-24,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC41ES,produção,EBS-08,Sonda Deslocada
+2020-07-10,2020-07-17,Espírito Santo,,Petrobras,TERRA,0.0,7CNC42DES,produção,EBS-08,Sonda Deslocada
+2020-06-23,2020-07-03,Espírito Santo,,Petrobras,TERRA,0.0,7CNC43ES,produção,EBS-08,Sonda Deslocada
+2020-08-16,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC44ES,produção,EBS-08,Sonda Deslocada
+2020-09-21,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC45DES,produção,EBS-08,Última posição
+2020-08-30,,Espírito Santo,,Petrobras,TERRA,0.0,7CNC46ES,produção,EBS-08,Sonda Deslocada
 2020-01-07,2020-01-12,Espírito Santo,,Petrobras,TERRA,0.0,7FAL157DES,produção,EBS-08,Sonda Deslocada
 2020-01-15,2020-01-20,Espírito Santo,,Petrobras,TERRA,0.0,7FAL158DES,produção,EBS-08,Sonda Deslocada
 2020-01-23,2020-01-28,Espírito Santo,,Petrobras,TERRA,0.0,7FAL159DES,produção,EBS-08,Sonda Deslocada
@@ -29977,26 +29984,31 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2020-04-20,2020-04-24,Espírito Santo,,Petrobras,TERRA,0.0,7FAL169ES,produção,EBS-08,Sonda Deslocada
 2020-04-12,2020-04-17,Espírito Santo,,Petrobras,TERRA,0.0,7FAL170ES,produção,EBS-08,Sonda Deslocada
 2020-05-07,2020-05-13,Espírito Santo,,Petrobras,TERRA,0.0,7FAL172ES,produção,EBS-08,Sonda Deslocada
-2020-05-31,,Espírito Santo,,Petrobras,TERRA,0.0,7FAL173DES,produção,EBS-08,Sonda Deslocada
+2020-05-31,2020-06-04,Espírito Santo,,Petrobras,TERRA,0.0,7FAL173DES,produção,EBS-08,Sonda Deslocada
 2020-03-11,2020-03-15,Espírito Santo,,Petrobras,TERRA,0.0,8FAL165DES,produção,EBS-08,Sonda Deslocada
 2020-04-28,2020-05-03,Espírito Santo,,Petrobras,TERRA,0.0,8FAL168DES,produção,EBS-08,Sonda Deslocada
 2020-05-16,2020-05-21,Espírito Santo,,Petrobras,TERRA,0.0,8FAL171ES,produção,EBS-08,Sonda Deslocada
-2020-05-24,,Espírito Santo,,Petrobras,TERRA,0.0,8FAL174DES,produção,EBS-08,Sonda Deslocada
-2020-05-25,,Espírito Santo,,Petrobras,MAR,1395.0,7GLF49HESS,produção,PETROBRAS 10000,Sonda Deslocada
-2020-05-23,,Parnaíba,PN-T-48,Eneva,TERRA,0.0,3ENV11DMA,exploração,GREAT - 120,Sonda Deslocada
-2020-07-03,,Parnaíba,PN-T-48,Eneva,TERRA,0.0,3ENV12DMA,exploração,GREAT - 120,Última posição
+2020-05-24,2020-05-28,Espírito Santo,,Petrobras,TERRA,0.0,8FAL174DES,produção,EBS-08,Sonda Deslocada
+2020-05-25,2020-06-10,Espírito Santo,,Petrobras,MAR,1395.0,7GLF49HESS,produção,PETROBRAS 10000,Sonda Deslocada
+2020-09-09,,Parnaíba,PN-T-102A,Eneva,TERRA,0.0,1ENV15MA,exploração,GREAT - 120,Sonda Deslocada
+2020-08-17,,Parnaíba,PN-T-103,Eneva,TERRA,0.0,4ENV14MA,exploração,GREAT - 120,Sonda Deslocada
+2020-05-23,2020-06-15,Parnaíba,PN-T-48,Eneva,TERRA,0,3ENV11DMA,exploração,GREAT - 120,Sonda Deslocada
+2020-07-03,2020-07-16,Parnaíba,PN-T-48,Eneva,TERRA,0,3ENV12DMA,exploração,GREAT - 120,Sonda Deslocada
+2020-10-01,,Parnaíba,,Eneva,TERRA,0.0,7GVBN1DMA,produção,GREAT - 120,Última posição
+2020-08-28,,Parnaíba,,Eneva,TERRA,0.0,7GVTE1MA,produção,GREAT - 120,Sonda Deslocada
 2020-05-07,2020-07-15,Parnaíba,,Eneva,TERRA,0.0,7GVB16MA,produção,GREAT - 120,Sonda Deslocada
 2020-03-25,2020-04-05,Parnaíba,,Eneva,TERRA,0.0,7GVP2DMA,produção,GREAT - 120,Sonda Deslocada
 2020-04-12,2020-04-21,Parnaíba,,Eneva,TERRA,0.0,7GVP3DMA,produção,GREAT - 120,Sonda Deslocada
 2020-02-20,2020-02-27,Parnaíba,,Eneva,TERRA,0.0,7GVP4DMA,produção,GREAT - 120,Sonda Deslocada
 2020-03-02,2020-03-09,Parnaíba,,Eneva,TERRA,0.0,7GVP7DMA,produção,GREAT - 120,Sonda Deslocada
 2020-01-27,2020-02-05,Parnaíba,,Eneva,TERRA,0.0,7GVP8DMA,produção,GREAT - 120,Sonda Deslocada
+2020-08-02,2020-08-09,Parnaíba,PN-T-68,Eneva,TERRA,0,1ENV13MA,exploração,GREAT - 120,Sonda Deslocada
 2020-06-12,2020-06-12,Potiguar,,Petrobras,TERRA,0.0,7ET1889RN,produção,EBS-05,Sonda Deslocada
 2020-06-03,2020-06-04,Potiguar,,Petrobras,TERRA,0.0,7ET1890RN,produção,EBS-05,Sonda Deslocada
 2020-06-15,2020-06-16,Potiguar,,Petrobras,TERRA,0.0,7ET1891RN,produção,EBS-05,Última posição
 2020-05-13,2020-05-13,Potiguar,,Petrobras,TERRA,0.0,7ET1893RN,produção,EBS-05,Sonda Deslocada
 2020-06-07,2020-06-07,Potiguar,,Petrobras,TERRA,0.0,7ET1894RN,produção,EBS-05,Sonda Deslocada
-2020-05-31,2020-05-31,Potiguar,,Petrobras,TERRA,0.0,7ET1895RN,produção,EBS-05,Sonda Deslocada
+2020-05-17,2020-05-31,Potiguar,,Petrobras,TERRA,0.0,7ET1895RN,produção,EBS-05,Sonda Deslocada
 2020-05-09,2020-05-10,Potiguar,,Petrobras,TERRA,0.0,7ET1896RN,produção,EBS-05,Sonda Deslocada
 2020-05-17,2020-05-17,Potiguar,,Petrobras,TERRA,0.0,7ET1898RN,produção,EBS-05,Sonda Deslocada
 2020-05-23,2020-05-24,Potiguar,,Petrobras,TERRA,0.0,7ET1911RN,produção,EBS-05,Sonda Deslocada
@@ -30011,27 +30023,35 @@ Início,Término,Bacia,Ativo,Operador,Ambiente,Lâmina d'água,Código (ANP),Objetivo
 2020-01-20,2020-02-02,Potiguar,,Petrobras,TERRA,0.0,7GMS7RN,produção,EBS-05,Sonda Deslocada
 2020-02-04,2020-02-12,Potiguar,,Petrobras,TERRA,0.0,7GMS8RN,produção,EBS-05,Sonda Deslocada
 2020-02-14,2020-02-21,Potiguar,,Petrobras,TERRA,0.0,7GMS9RN,produção,EBS-05,Sonda Deslocada
-2020-03-02,,Recôncavo,,Petrobras,TERRA,0.0,7RO115DBA,produção,National Oilwell Varco - 750,Última posição
+2020-03-02,2020-03-06,Recôncavo,,Petrobras,TERRA,0.0,7RO115DBA,produção,National Oilwell Varco - 750,Última posição
+2020-09-22,,Recôncavo,,Maha Energy,TERRA,0.0,7TIE2DBA,produção,FAXE-2,Última posição
+2020-10-01,,Santos,,Petrobras,MAR,2001.0,8BUZ38DRJS,produção,ETESCO TAKATSUGU J,Última posição
 2020-05-08,2020-05-30,Santos,SATURNO,Shell Brasil,MAR,2609.0,1SHEL33RJS,exploração,Brava Star,Última posição
 2020-03-04,2020-03-28,Santos,S_GATO_MAT,Shell Brasil,MAR,2048.0,3SHEL32DRJS,exploração,Brava Star,Sonda Deslocada
-2020-06-06,,Santos,,Petrobras,MAR,2319.6,7BBG5DRJS,produção,OCEAN VALOR,Última posição
-2020-02-25,,Santos,,Petrobras,MAR,2169.0,8BBG4DRJS,produção,OCEAN VALOR,Sonda Deslocada
-2020-02-10,2020-05-28,Santos,,Petrobras,MAR,2104.0,9BUZ39DARJS,N.D.,ODN I,Última posição
+2020-06-06,2020-08-07,Santos,,Petrobras,MAR,2319.6,7BBG5DRJS,produção,OCEAN VALOR,Última posição
+2020-02-25,2020-07-07,Santos,,Petrobras,MAR,2170.0,8BBG4DRJS,produção,OCEAN VALOR,Sonda Deslocada
+2020-08-07,2020-09-20,Santos,,Petrobras,MAR,1913.0,7BUZ45DARJS,produção,NORBE VIII,Última posição
+2020-07-26,2020-08-02,Santos,,Petrobras,MAR,1913.0,7BUZ45DRJS,produção,NORBE VIII,Sonda Deslocada
+2020-02-10,2020-05-28,Santos,,Petrobras,MAR,2104.0,9BUZ39DARJS,N.D.,ODN I,Sonda Deslocada
 2020-01-20,2020-01-29,Santos,,Petrobras,MAR,2106.0,9BUZ39DRJS,N.D.,ODN I,Sonda Deslocada
-2020-03-14,2020-05-18,Santos,,Petrobras,MAR,2033.0,9BUZ40DRJS,N.D.,ETESCO TAKATSUGU J,Última posição
-2020-03-07,2020-06-09,Santos,,Petrobras,MAR,1991.0,9BUZ41RJS,N.D.,OCEAN COURAGE,Última posição
+2020-03-14,2020-05-18,Santos,,Petrobras,MAR,2033.0,9BUZ40DRJS,N.D.,ETESCO TAKATSUGU J,Sonda Deslocada
+2020-03-07,2020-06-09,Santos,,Petrobras,MAR,1993.0,9BUZ41RJS,N.D.,OCEAN COURAGE,Última posição
 2020-06-11,,Santos,,Petrobras,MAR,1906.0,9BUZ42RJS,N.D.,PETROBRAS 10000,Sonda Deslocada
-2020-07-11,,Santos,,Petrobras,MAR,1914.0,9BUZ43RJS,N.D.,PETROBRAS 10000,Última posição
-2020-01-11,2020-04-20,Santos,,Petrobras,MAR,2113.0,8LL118DRJS,produção,LAGUNA STAR,Sonda Deslocada
+2020-07-11,,Santos,,Petrobras,MAR,1914.0,9BUZ43RJS,N.D.,PETROBRAS 10000,Sonda Deslocada
+2020-10-04,,Santos,,Petrobras,MAR,2057.0,9BUZ47RJS,N.D.,PETROBRAS 10000,Última posição
+2020-10-07,,Santos,,Petrobras,MAR,1850.0,9BUZ48DRJS,N.D.,ODN I,Última posição
 2020-03-05,2020-03-18,Santos,,Petrobras,MAR,1997.0,7MRO10ARJS,produção,Deepwater Corcovado,Sonda Deslocada
 2020-04-06,2020-06-13,Santos,,Petrobras,MAR,1994.0,7MRO10BRJS,produção,Deepwater Corcovado,Última posição
 2020-02-19,2020-02-26,Santos,,Petrobras,MAR,1997.0,7MRO10RJS,produção,Deepwater Corcovado,Sonda Deslocada
-2020-07-11,,Santos,,Petrobras,MAR,2049.0,9MRO9DARJS,N.D.,Deepwater Myconos,Última posição
-2020-03-30,,Santos,,Petrobras,MAR,2049.0,9MRO9DRJS,N.D.,Deepwater Myconos,Sonda Deslocada
+2020-09-08,,Santos,,Petrobras,MAR,2046.0,8MRO8RJS,produção,Deepwater Myconos,Última posição
+2020-07-11,2020-08-10,Santos,,Petrobras,MAR,2049.0,9MRO9DARJS,N.D.,Deepwater Myconos,Sonda Deslocada
+2020-03-30,2020-06-20,Santos,,Petrobras,MAR,2049.0,9MRO9DRJS,N.D.,Deepwater Myconos,Sonda Deslocada
 2020-01-03,2020-05-20,Santos,,Petrobras,MAR,2118.0,7SEP6RJS,produção,NORBE VIII,Sonda Deslocada
-2020-03-11,2020-06-12,Santos,,Petrobras,MAR,2136.0,7SEP7DRJS,produção,PETROBRAS 10000,Sonda Deslocada
+2020-03-10,2020-06-12,Santos,,Petrobras,MAR,2138.0,7SEP7DRJS,produção,PETROBRAS 10000,Sonda Deslocada
 2020-03-19,,Santos,,Petrobras,MAR,2139.0,7SEP8DRJS,produção,PETROBRAS 10000,Sonda Deslocada
 2020-01-10,2020-02-14,Santos,,Petrobras,MAR,2138.0,8SEP4DRJS,produção,NORBE VIII,Sonda Deslocada
-2020-01-28,,Santos,,Petrobras,MAR,2193.0,8SLL7RJS,produção,LAGUNA STAR,Sonda Deslocada
-2020-05-07,,Santos,,Petrobras,MAR,2192.0,8SRR4DRJS,produção,LAGUNA STAR,Sonda Deslocada
+2020-07-28,,Santos,,Petrobras,MAR,2134.0,8SEP5DRJS,produção,ODN II,Última posição
+2020-01-28,2020-09-21,Santos,,Petrobras,MAR,2193.0,8SLL7RJS,produção,LAGUNA STAR,Sonda Deslocada
+2020-05-07,2020-06-08,Santos,,Petrobras,MAR,2192.0,8SRR4DRJS,produção,LAGUNA STAR,Sonda Deslocada
 2020-07-16,,Santos,,Petrobras,MAR,2187.0,9SRR5RJS,N.D.,LAGUNA STAR,Última posição
+2020-01-11,2020-04-20,Santos,,Petrobras,MAR,2113.0,8LL118DRJS,produção,LAGUNA STAR,Sonda Deslocada
