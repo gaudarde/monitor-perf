@@ -71,20 +71,24 @@ def download():
         r = s.post(r_url, headers=randomheaders.LoadHeader(), data=data_request, verify=False, stream=True)
 
         # Baixa os arquivos no formato original (html)
+        try:
+            arquivo_html = f'{arquivos_individuais}/pocos{str(ano)}.html'
+            with open(arquivo_html, 'wb') as output:
+                output.write(r.content)
 
-        arquivo_html = f'{arquivos_individuais}/pocos{str(ano)}.html'
-        with open(arquivo_html, 'wb') as output:
-            output.write(r.content)
+            # Converte o arquivo html para csv
+            df = pd.read_html(arquivo_html, decimal=',', encoding='latin1', thousands='.')[0]
+            arquivo_csv0 = os.path.basename(arquivo_html).split('.')[0]
+            arquivo_csv = f'{arquivo_csv0}.csv'
+            df.to_csv(f'{arquivos_individuais}/{arquivo_csv}', index=False, header=False, encoding='latin1',
+                      decimal=',')
 
-        # Converte o arquivo html para csv
-        df = pd.read_html(arquivo_html, decimal=',', encoding='latin1', thousands='.')[0]
-        arquivo_csv0 = os.path.basename(arquivo_html).split('.')[0]
-        arquivo_csv = f'{arquivo_csv0}.csv'
-        df.to_csv(f'{arquivos_individuais}/{arquivo_csv}', index=False, header=False, encoding='latin1',
-                  decimal=',')
-        # log
-        print(f'{ano}: {round(os.path.getsize(arquivo_html) / 1024)} kb')
-        sleep(1)
+            # log
+            print(f'{ano}: {round(os.path.getsize(arquivo_html) / 1024)} kb')
+            sleep(1)
+        except:
+            print(f'ERRO {arquivo_html}\n'
+                  f'{r.status_code}')
 
         """Remove os arquivos html e arquivos sem data (menos de 430 kb)"""
         os.remove(arquivo_html)

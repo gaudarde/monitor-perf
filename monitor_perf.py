@@ -16,17 +16,13 @@ if __name__ == '__main__':
     pd.set_option('display.max_columns', 20)
     pd.set_option('display.max_rows', 500)
 
-    '''    if datetime.fromtimestamp(os.path.getatime('data/table.csv')).date() < datetime.today().date():
+    if datetime.fromtimestamp(os.path.getmtime('data/table.csv')).date() < datetime.today().date():
         download.download()
         download.merge()
     else:
-        pass'''
+        pass
 
-    try:
-        download.download()
-    finally:
-        download.merge()
-        dados.dados()
+    dados.dados()
 
     arquivo = max(glob.glob('arquivos_definitivos/*.csv'), key=os.path.getctime)
     df = pd.read_csv(arquivo, encoding='cp1252', parse_dates=[
